@@ -56,10 +56,10 @@ body{
 	--sidebar_text_color: black;
 	--button_height: 60px;
 
-	--caption_height: 40px;
-	--tile_spacing: 20px;
-	--tile_width: 325px;
-	--tile_height: calc(var(--tile_width) + var(--caption_height) + 15px);
+	--caption_height: 25px;
+	--tile_spacing: 10px;
+	--tile_width: 400px;
+	--tile_height: calc(var(--tile_width) + var(--caption_height) + 10px);
 
 	--header_height: 90px;
 	--footer_height: 50px;
@@ -118,8 +118,8 @@ p{
 /*image stuff*/
 	img{
 		align-self: center;
-		max-height: 550px;
-		border-radius: 10px;
+		max-height: 400px;
+		border-radius: 5px;
 	}
 
 	.row_img{
@@ -132,12 +132,41 @@ p{
 		max-height: 400px;
 	}
 
+	#images-wrapper {    
+	   line-height: 0;       
+	    -webkit-column-count: 5;    
+	    -webkit-column-gap: 0px;    
+	    -moz-column-count: 5;
+	    -moz-column-gap: 0px;
+	     column-count: 5;    
+	     column-gap: 5px;    
+	}  
+	#images-wrapper img {    
+	   width: 100% !important;    
+	   height: auto !important;  
+	}  
+	#images-wrapper{    
+	   display:inline-block;    
+	   margin-right: auto;    
+	   margin-left: auto;  
+	}
 
 	.image_container{
-		display: flex;
-		justify-content: space-around;
-		flex-direction: row;
-		flex: 1;
+		--size: 300px;
+		display: grid;
+		grid-template-columns: repeat(6, var(--size));
+		grid-auto-rows: var(--size);
+		gap: 5px;
+		place-items: start center;
+		margin-bottom: var(--size);
+		/*justify-content: space-around;
+		flex-direction: row wrap;
+		align-items: center;*/
+	}
+
+	.image_container img{
+		width: auto;
+		height: 450px;
 	}
 
 	.caption{
@@ -150,7 +179,7 @@ p{
 	}
 
 	.lazy{
-		max-height: 350px;
+		max-height: 450px;
 	}
 
 
@@ -309,7 +338,7 @@ p{
 		background-color: var(--content_back_color);
 		color: var(--content_text_color);
 
-		width: calc(var(--tile_width)*4 + var(--tile_spacing)*3);
+		width: calc(var(--tile_width)*3 + var(--tile_spacing)*2);
 		}
 
 		.section_header{
@@ -334,7 +363,7 @@ p{
 				height: 100%;
 				width: var(--tile_width);
 				text-align: center;
-				border-radius: 20px;
+				border-radius: 10px;
 			}
 
 				.section_tile:hover{
@@ -351,12 +380,12 @@ p{
 				max-width: calc(var(--tile_width) - 20px);
 				max-height: calc(var(--tile_height) - var(--caption_height) - 10px);
 				margin-top: 10px;
-				border-radius: 15px;			
+				border-radius: 10px;			
 			}
 
 			.tile_caption{
 				height: var(--caption_height);
-				font-size: 16px;
+				font-size: 18px;
 				padding-top: calc(var(--caption_height)/3);
 				font-weight: bold;
 			}

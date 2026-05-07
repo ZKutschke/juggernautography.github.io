@@ -14,10 +14,10 @@
 <html>
 	<head>
 		<meta charset='UTF-8'/>
-		<meta property="og:url" content='zkutschke.github.io/projects.html' />
+		<meta property="og:url" content='juggernautography.github.io/main.html' />
 		<meta property="og:type" content='website' />
 		<meta property="og:title" content='Zach Kutschke' />
-		<meta property="og:description" content='Past projects and portfolio' />
+		<meta property="og:description" content='Portfolio' />
 		<meta property="og:image" content='opt_image/preview.jpg'/>
 
 		<title>Zach Kutschke</title>
@@ -138,7 +138,7 @@
 		<div id='load_page'>
 			<div id='loader' style='height: 20vh;'></div>
 
-			<div class="sk-cube-grid" id='loader'>
+			<div class="sk-cube-grid" id='loader2'>
 			  	<div class="sk-cube sk-cube1"></div>
 			  	<div class="sk-cube sk-cube2"></div>
 			  	<div class="sk-cube sk-cube3"></div>
@@ -159,24 +159,28 @@
 				//Transition when Page loads
 				setTimeout(hide_page, 1);
 					
-				window.addEventListener("load", function() {	// Everything but IE
-		 	  		showPage();
-					initialize();
-				}, false); 
+				// window.addEventListener("load", function() {	// Everything but IE
+		 	//   		showPage();
+				// 	initialize();
+				// }, false); 
 
-				window.attachEvent("onload", function() {	// IE
-					showPage();
-					initialize();
+				// window.attachEvent("onload", function() {	// IE
+				// 	showPage();
+				// 	initialize();
+				// });
+
+				window.addEventListener("load", () => {
+				    showPage();
+				    initialize();
 				});
 
 				//Close all but top div, highlight top buttton
 				function initialize(){
-					// var button_list = ['project_select_b','pwc2_b','pwc_b','bdmed_b','map2_b','map1_b','msynth_b','2120_b','sevt_b','2671_b','2810_b','2007_b','casting_b','cannons_b','h2ouse_b','misc_b','icl_b','2013_b']; 
-					// var div_list = ['project_select_d','pwc2_d','pwc_d','bdmed_d','map2_d','map1_d','msynth_d','2120_d','sevt_d','2671_d','2810_d','2007_d','casting_d','cannons_d','h2ouse_d','misc_d','icl_d','2013_d']; 
-
+					//var button_list = ['project_select_b','pwc2_b','pwc_b','bdmed_b','map2_b','map1_b','msynth_b','2120_b','sevt_b','2671_b','2810_b','2007_b','casting_b','cannons_b','h2ouse_b','misc_b','icl_b','2013_b']; 
+					//var div_list = ['project_select_d','pwc2_d','pwc_d','bdmed_d','map2_d','map1_d','msynth_d','2120_d','sevt_d','2671_d','2810_d','2007_d','casting_d','cannons_d','h2ouse_d','misc_d','icl_d','2013_d']; 
 					var button_list = ['project_select_b','Events_b','Weddings_b','Portraits_b','Infrared_b','Nature_b','Architecture_b'];
-					var div_list = ['project_select_b','Events_d','Weddings_d','Portraits_d','Infrared_d','Nature_d','Architecture_d'];
-					
+					var div_list = ['project_select_d','Events_d','Weddings_d','Portraits_d','Infrared_d','Nature_d','Architecture_d'];
+									   
 					document.getElementById(button_list[0]).className = 'menu_button menu_selected';
 
 					for(var i=1; i<div_list.length; i++){
@@ -192,6 +196,7 @@
 				//Define which elements to show and hide
 				function showPage() {
 			  		document.getElementById('loader').style.display = 'none';
+			  		document.getElementById('loader2').style.display = 'none';
 			  		document.getElementById('quote').style.display = 'none';
 			  		document.getElementById('load_page').style.display = 'none';
 			  		document.getElementById('entire_page').style.display = 'block';
@@ -205,23 +210,11 @@
 					<div class='menu_container'>
 						<h2 style='padding-left: 30px; width: 50vw; text-align: left; float: left;'> Zach Kutschke </h2>
 
-					<!--	<a href='about_2.html'>
-							<div class='menu_button'>
-								About
-							</div>
-						</a> -->
-
 					
 						<div class='menu_button' id='project_select_b' onclick="show_hide('project_select_b', 'project_select_d')">
-							Projects
+							Portfolio
 						</div>
 						
-
-						<a href='files/resume.pdf' target='_blank'>
-							<div class='menu_button'>
-								Resume
-							</div>
-						</a>
 
 						<a href='https://www.linkedin.com/in/zachkutschke/' target='_blank'>
 							<div class='menu_button'>
@@ -233,12 +226,21 @@
 
 
 
+
+
+
+
+
 <!---          MIDDLE SECTION                ---->
 				<div class='middle'>
 					<div style='height: 50px;'></div>
 
 					<!----           FRONT PAGE      ---->
 					<div id='project_select_d' class='project_page'>
+						<!-- <div class='section_header'>
+								Professional
+						</div> -->
+						<!-- <hr> -->
 						
 						<div class = 'section_row'>
 							<div class='section_tile' onclick="show_hide('Events_b', 'Events_d')">
@@ -249,7 +251,7 @@
 							</div>
 
 							<div class='section_tile' onclick="show_hide('Weddings_b', 'Weddings_d')">
-								<img src="opt_pics/bos_garden_guy.jpg" class='tile_image'>
+								<img src="opt_pics/snapBoogie5.jpg" class='tile_image'>
 								<div class='tile_caption'>
 									Weddings
 								</div>
@@ -262,6 +264,7 @@
 								</div>
 							</div>
 
+							
 						</div>
 
 
@@ -269,7 +272,7 @@
 							<div class='section_tile' onclick="show_hide('Infrared_b', 'Infrared_d')">
 								<img src="opt_pics/IR_leila1.jpg" class='tile_image'>
 								<div class='tile_caption'>
-									Infrared  Full Spectrum
+									Infrared & Full Spectrum
 								</div>
 							</div>
 
@@ -286,52 +289,51 @@
 									Architecture
 								</div>
 							</div>
-
 						</div>
 
-
-
-						<div class='spacer'></div>
-
-
-						<div style='height: 150px;'></div>
 					</div>
-					
-				
 
 
 
 
-	<!--      ----    PURE WATERCRAFT 2020   ----                     -->
+
+	<!--      ----    Events   ----                     -->
 					<div id='Events_d'>
 						<h3 class='content_title'>
 							Events
 						</h3>
 
+						<div style='height: 20px;'></div>
+
+
+						<div class='images_wrapper'>
+								<img data-src='opt_pics/bos_garden_guy.jpg'  class='lazy' />
+
+								<img data-src='opt_pics/ren_fair.jpg' class='lazy' />
+
+								<img data-src='opt_pics/snapBoogie3.jpg' class='lazy' />
+
+								<img data-src='opt_pics/snapBoogie1.jpg' class='lazy' />
+
+								<img data-src='opt_pics/snapBoogie6.jpg' class='lazy' />
+						</div>
 
 					</div>
 						
 
-
-
-
-
-	<!--      ----    PURE WATERCRAFT 2020   ----                     -->
+	<!--      ----   Weddings  ----                     -->
 					<div id='Weddings_d'>
 						<h3 class='content_title'>
 							Weddings
 						</h3>
-						
-						
+						<hr>
+
 						
 					</div>
 
 
 
-
-
-
-	<!--      ----    BD MEDICAL         ----                     -->
+	<!--      ----    Portraits         ----                     -->
 					<div id='Portraits_d'>
 						<h3 class='content_title'>
 							Portraits
@@ -343,25 +345,86 @@
 
 
 
-	<!--      ----    MAP 2nd            ----                     -->
+	<!--      ----   Infrared  ----                     -->
 					<div id='Infrared_d'>
 						<h3 class='content_title'>
 							Infrared & Full Spectrum
 						</h3>
 
+						<div style='height: 20px;'></div>
+
+
+						<div class='images_wrapper'>
+								<img data-src='opt_pics/IR_leila2.jpg'  class='lazy' />
+
+								<img data-src='opt_pics/IR_leila3.jpg' class='lazy' />
+
+								<img data-src='opt_pics/FS_capital2.jpg' class='lazy' />
+
+								<img data-src='opt_pics/IR_pagoda.jpg' class='lazy' />
+
+								<img data-src='opt_pics/IR_tower.jpg' class='lazy' />
+
+								<img data-src='opt_pics/IR_leila1.jpg' class='lazy' />
+						</div>
+
+						
 					</div>
 
 
 
 
 
-
-	<!--      ----    MAP 1st            ----                     -->
+	<!--      ----    Nature         ----                     -->
 					<div id='Nature_d'>
 						<h3 class='content_title'>
 							Nature
 						</h3>
 
+						<div style='height: 20px;'></div>
+
+
+						<div class='images_wrapper'>
+								<img data-src='opt_pics/forest1.jpg'  class='lazy' />
+
+								<img data-src='opt_pics/forest2.jpg' class='lazy' />
+
+								<img data-src='opt_pics/lilBird.jpg' class='lazy' />
+
+								<img data-src='opt_pics/forest3.jpg' class='lazy' />
+
+								<img data-src='opt_pics/fall_dock.jpg' class='lazy' />
+						</div>
+
+
+					</div>
+
+
+
+	<!--      ----    Architecture            ----                     -->
+					<div id='Architecture_d'>
+						<h3 class='content_title'>
+							Architecture
+						</h3>
+
+						<div style='height: 20px;'></div>
+
+
+						<div class='images_wrapper'>
+								<img data-src='opt_pics/bw_zoo.jpg'  class='lazy' />
+
+								<img data-src='opt_pics/bw_harvard.jpg' class='lazy' />
+
+								<img data-src='opt_pics/bw_glassy_building.jpg' class='lazy' />
+
+								<img data-src='opt_pics/bw_roof.jpg' class='lazy' />
+
+								<img data-src='opt_pics/bw_detroit1.jpg' class='lazy' />
+
+								<img data-src='opt_pics/bw_detroit2.jpg' class='lazy' />
+						</div>
+
+
 					</div>
 
 
@@ -369,21 +432,12 @@
 
 
 
-
-	<!--        -----    Msynth ----             -->
-				<div id='Architecture_d'>
-					<h3 class='content_title'>
-						Architecture
-					</h3>
-
-					
-				</div>
-					
-			</div>
-
-			<div style='height: 50px;'></div>
-			<div class='footer'></div>
+	
+		<div style='height: 50px;'></div>
+		<div class='footer'></div>
 		</div>
+	</div>
+
 
 	</body>
 
