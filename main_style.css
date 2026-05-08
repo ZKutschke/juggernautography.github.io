@@ -296,7 +296,80 @@ p{
 	}
 
 
+/*Contact*/
+	.contact-section {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 80px 20px;
+	}
+	
+	.contact-form {
+		width: 100%;
+		max-width: 800px;
 
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		padding: 40px;
+
+		border-radius: 20px;
+
+	}
+	
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+
+		padding: 15px;
+
+		border: none;
+		border-radius: 12px;
+
+		background: #EDFBFF;
+		color: black;
+
+		font-size: 1rem;
+
+		outline: none;
+
+		transition: 0.2s ease;
+	}
+	
+	.contact-form input:focus,
+	.contact-form textarea:focus {
+		background: #DEFCFF;
+		transform: scale(1.01);
+	}
+	
+	.contact-form textarea {
+		min-height: 150px;
+		resize: vertical;
+	}
+	
+	.contact-form button {
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+    color: black;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+	
+	.contact-form button:hover {
+		transform: translateY(-2px);
+		background: #dcdcdc;
+	}
 
 
 

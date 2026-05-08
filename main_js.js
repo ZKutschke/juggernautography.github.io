@@ -4,8 +4,8 @@ function show_hide(b,d){
 	var current_button = document.getElementById(b);
 	var current_div = document.getElementById(d);
 
-	var button_list = ['project_select_b','Events_b','Weddings_b','Portraits_b','Infrared_b','Nature_b','Architecture_b'];
-	var div_list = ['project_select_d','Events_d','Weddings_d','Portraits_d','Infrared_d','Nature_d','Architecture_d'];
+	var button_list = ['project_select_b','contact_b','Events_b','Weddings_b','Portraits_b','Infrared_b','Nature_b','Architecture_b'];
+	var div_list = ['project_select_d','contact_d','Events_d','Weddings_d','Portraits_d','Infrared_d','Nature_d','Architecture_d'];
 
 	// var button_list = ['project_select_b','pwc2_b','pwc_b','bdmed_b','map2_b','map1_b','sevt_b','2671_b','2810_b','2007_b','casting_b','cannons_b','h2ouse_b','misc_b','icl_b','2013_b', 'msynth_b','2120_b']; 
 	// var div_list = ['project_select_d','pwc2_d','pwc_d','bdmed_d','map2_d','map1_d','sevt_d','2671_d','2810_d','2007_d','casting_d','cannons_d','h2ouse_d','misc_d','icl_d','2013_d', 'msynth_d','2120_d']; 
@@ -26,6 +26,19 @@ function show_hide(b,d){
 	    if(location.hash !== ''){
 	        history.replaceState(null, null, ' ');
 	    }
+	}
+	
+	// CONTACT BUTTON
+	if (current_button != document.getElementById('contact_b')) {
+		document.getElementById('contact_b').className = 'menu_button';
+		if (location.hash !== '#' + b) {
+			location.hash = b;
+		}
+	} else {
+		document.getElementById('contact_b').className = 'menu_button menu_selected';
+		if (location.hash !== '') {
+			history.replaceState(null, null, ' ');
+		}
 	}
 
 	//display current div 
