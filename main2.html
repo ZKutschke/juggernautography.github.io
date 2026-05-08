@@ -14,7 +14,7 @@
 <html>
 	<head>
 		<meta charset='UTF-8'/>
-		<meta property="og:url" content='juggernautography.github.io/main.html' />
+		<meta property="og:url" content='https://juggernautography.github.io/main2.html' />
 		<meta property="og:type" content='website' />
 		<meta property="og:title" content='Zach Kutschke' />
 		<meta property="og:description" content='Portfolio' />
@@ -25,108 +25,6 @@
 		<script type='text/javascript' src ='main_js.js'></script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<!--   ---   Loading Page style   ---   -->
-		<style>
-			/* Center the loader */
-			#load_page{
-				width: 100vw;
-				height: 100vh;
-				background-color: black;
-			}
-
-			.wait{
-				padding-top: 50px; 
-				font-family: Bookman; 
-				color: #66FCF1;
-				font-size: 16px;
-				font-weight: bold;
-				width: 20vw;
-				margin: auto;
-			}
-
-			.sk-cube-grid {
-				width: 5vw;
-			  	height: 5vw;
-			  	margin: auto;
-			}
-
-			.sk-cube-grid .sk-cube {
-			  	width: 33%;
-			  	height: 33%;
-			  	background-color: #66FCF1;
-			  	float: left;
-			  	-webkit-animation: sk-cubeGridScaleDelay 1.5s infinite ease-in-out;
-			    animation: sk-cubeGridScaleDelay 1.5s infinite ease-in-out; 
-			}
-			.sk-cube-grid .sk-cube1 {
-			  	-webkit-animation-delay: 0.2s;
-			    animation-delay: 0.2s; }
-			.sk-cube-grid .sk-cube2 {
-			  	-webkit-animation-delay: 0.3s;
-			    animation-delay: 0.3s; }
-			.sk-cube-grid .sk-cube3 {
-			  	-webkit-animation-delay: 0.4s;
-			    animation-delay: 0.4s; }
-			.sk-cube-grid .sk-cube4 {
-			  	-webkit-animation-delay: 0.1s;
-			    animation-delay: 0.1s; }
-			.sk-cube-grid .sk-cube5 {
-			  	-webkit-animation-delay: 0.2s;
-			    animation-delay: 0.2s; }
-			.sk-cube-grid .sk-cube6 {
-			  	-webkit-animation-delay: 0.3s;
-			    animation-delay: 0.3s; }
-			.sk-cube-grid .sk-cube7 {
-			  	-webkit-animation-delay: 0s;
-			    animation-delay: 0s; }
-			.sk-cube-grid .sk-cube8 {
-			  	-webkit-animation-delay: 0.1s;
-			    animation-delay: 0.1s; }
-			.sk-cube-grid .sk-cube9 {
-			  	-webkit-animation-delay: 0.2s;
-			    animation-delay: 0.2s; }
-
-			@-webkit-keyframes sk-cubeGridScaleDelay {
-			  	0%, 70%, 100% {
-			    	-webkit-transform: scale3D(1, 1, 1);
-			            	transform: scale3D(1, 1, 1);
-			  	} 35% {
-			    	-webkit-transform: scale3D(0, 0, 1);
-			            	transform: scale3D(0, 0, 1); 
-			  	}
-			}
-
-			@keyframes sk-cubeGridScaleDelay {
-			  	0%, 70%, 100% {
-			    	-webkit-transform: scale3D(1, 1, 1);
-			            	transform: scale3D(1, 1, 1);
-			  	} 35% {
-			    	-webkit-transform: scale3D(0, 0, 1);
-			            	transform: scale3D(0, 0, 1);
-			  	}	 
-			}
-
-			/* Add animation to "page content" */
-			.animate-bottom {
-				position: relative;
-				-webkit-animation-name: animatebottom;
-				-webkit-animation-duration: 0.5s;
-				animation-name: animatebottom;
-				animation-duration: 0.5s
-			}
-
-			@-webkit-keyframes animatebottom {
-				from { bottom:-50px; opacity:0 } 
-				to { bottom:0px; opacity:1 }
-			}
-
-			@keyframes animatebottom { 
-				from{ bottom:-50px; opacity:0 } 
-				to{ bottom:0; opacity:1 }
-			}
-		</style>
 	</head>
 
 
@@ -134,50 +32,27 @@
 
 	<body style="margin:0;">
 
-<!-- ---- ----     Loading page and initialization   ---- ----> 
-		<div id='load_page'>
-			<div id='loader' style='height: 20vh;'></div>
-
-			<div class="sk-cube-grid" id='loader2'>
-			  	<div class="sk-cube sk-cube1"></div>
-			  	<div class="sk-cube sk-cube2"></div>
-			  	<div class="sk-cube sk-cube3"></div>
-			  	<div class="sk-cube sk-cube4"></div>
-			  	<div class="sk-cube sk-cube5"></div>
-			  	<div class="sk-cube sk-cube6"></div>
-			  	<div class="sk-cube sk-cube7"></div>
-			  	<div class="sk-cube sk-cube8"></div>
-			  	<div class="sk-cube sk-cube9"></div>
-			</div>
-
-			<div id='quote' class='wait'>Loading...</div>
-		</div>
-
-
  <!---- -----      Show/hide page + lazy loader    ---- ---- -->
-		<script>		
-				//Transition when Page loads
+		<script>	
 				setTimeout(hide_page, 1);
 					
-				// window.addEventListener("load", function() {	// Everything but IE
-		 	//   		showPage();
-				// 	initialize();
-				// }, false); 
+				window.addEventListener("load", function() {	// Everything but IE
+					showPage();
+					initialize();
+				}, false); 
 
-				// window.attachEvent("onload", function() {	// IE
-				// 	showPage();
-				// 	initialize();
-				// });
-
-				window.addEventListener("load", () => {
-				    showPage();
-				    initialize();
+				window.attachEvent("onload", function() {	// IE
+					showPage();
+					initialize();
 				});
 
+				//window.addEventListener("load", () => {
+				//    showPage();
+				//   initialize();
+				//});
+				
 				//Close all but top div, highlight top buttton
 				function initialize(){
-					//var button_list = ['project_select_b','pwc2_b','pwc_b','bdmed_b','map2_b','map1_b','msynth_b','2120_b','sevt_b','2671_b','2810_b','2007_b','casting_b','cannons_b','h2ouse_b','misc_b','icl_b','2013_b']; 
-					//var div_list = ['project_select_d','pwc2_d','pwc_d','bdmed_d','map2_d','map1_d','msynth_d','2120_d','sevt_d','2671_d','2810_d','2007_d','casting_d','cannons_d','h2ouse_d','misc_d','icl_d','2013_d']; 
 					var button_list = ['project_select_b','Events_b','Weddings_b','Portraits_b','Infrared_b','Nature_b','Architecture_b'];
 					var div_list = ['project_select_d','Events_d','Weddings_d','Portraits_d','Infrared_d','Nature_d','Architecture_d'];
 									   
@@ -195,10 +70,6 @@
 
 				//Define which elements to show and hide
 				function showPage() {
-			  		document.getElementById('loader').style.display = 'none';
-			  		document.getElementById('loader2').style.display = 'none';
-			  		document.getElementById('quote').style.display = 'none';
-			  		document.getElementById('load_page').style.display = 'none';
 			  		document.getElementById('entire_page').style.display = 'block';
 				}
 
@@ -237,10 +108,7 @@
 
 					<!----           FRONT PAGE      ---->
 					<div id='project_select_d' class='project_page'>
-						<!-- <div class='section_header'>
-								Professional
-						</div> -->
-						<!-- <hr> -->
+
 						
 						<div class = 'section_row'>
 							<div class='section_tile' onclick="show_hide('Events_b', 'Events_d')">
@@ -263,8 +131,6 @@
 									Portraits
 								</div>
 							</div>
-
-							
 						</div>
 
 
@@ -306,7 +172,7 @@
 						<div style='height: 20px;'></div>
 
 
-						<div class='images_wrapper'>
+						<div class='images-wrapper'>
 								<img data-src='opt_pics/bos_garden_guy.jpg'  class='lazy' />
 
 								<img data-src='opt_pics/ren_fair.jpg' class='lazy' />
@@ -354,7 +220,7 @@
 						<div style='height: 20px;'></div>
 
 
-						<div class='images_wrapper'>
+						<div class='images-wrapper'>
 								<img data-src='opt_pics/IR_leila2.jpg'  class='lazy' />
 
 								<img data-src='opt_pics/IR_leila3.jpg' class='lazy' />
@@ -384,7 +250,7 @@
 						<div style='height: 20px;'></div>
 
 
-						<div class='images_wrapper'>
+						<div class='images-wrapper'>
 								<img data-src='opt_pics/forest1.jpg'  class='lazy' />
 
 								<img data-src='opt_pics/forest2.jpg' class='lazy' />
@@ -410,7 +276,7 @@
 						<div style='height: 20px;'></div>
 
 
-						<div class='images_wrapper'>
+						<div class='images-wrapper'>
 								<img data-src='opt_pics/bw_zoo.jpg'  class='lazy' />
 
 								<img data-src='opt_pics/bw_harvard.jpg' class='lazy' />
