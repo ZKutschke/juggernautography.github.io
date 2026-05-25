@@ -178,6 +178,9 @@ p{
 		color: grey; 
 	}
 
+	.myImg{
+		max-height: 450px;
+	}
 	.lazy{
 		max-height: 450px;
 	}
